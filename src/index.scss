@@ -1,0 +1,675 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  margin: 0 auto;
+  min-height: 100vh;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: 0 auto;
+}
+
+ul {
+  list-style-type: none;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+svg {
+  display: block;
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1 {
+  font-family: "Hammersmith One";
+  font-size: 3.2rem;
+  font-weight: 400;
+  line-height: 1.25;
+  color: #0d2612;
+  text-align: start;
+  padding-left: 10.7rem;
+  margin-bottom: 5.7rem;
+}
+
+h2 {
+  font-family: "Hammersmith One";
+  font-size: 2rem;
+  line-height: 1.25;
+  font-weight: 400;
+  color: #190d26;
+  margin-bottom: 2.4rem;
+  padding-top: 2.7rem;
+  border-top: dotted;
+}
+
+h3 {
+  font-family: "Hammersmith One";
+  font-size: 2rem;
+  line-height: 1.25;
+  color: #190D26;
+  margin-bottom: 1.2rem;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding-block: 1.9rem;
+  max-width: 122rem;
+  margin-inline: 11.2rem;
+
+  div:first-child {
+    display: flex;
+    gap: 3rem;
+
+    a {
+      color: #fff;
+      font-size: 3rem;
+      font-weight: 400;
+      font-family: "Bruno Ace";
+      text-decoration: none;
+      line-height: 1;
+    }
+
+    div {
+      padding-block: 0.7rem;
+      display: flex;
+      gap: 1.7rem;
+
+      svg {
+        width: 1.8rem;
+        height: 1.8rem;
+      }
+
+      p {
+        color: #fff;
+        font-size: 1.4rem;
+        font-weight: 500;
+        font-family: "Inter";
+        line-height: 1.21;
+      }
+    }
+  }
+
+  & > div:nth-child(2) {
+    padding-block: 0.65rem;
+    display: flex;
+    gap: 2.5rem;
+
+    p {
+      font-family: "Inter";
+      font-size: 1.4rem;
+      line-height: 1.21;
+      font-weight: 400;
+      color: #fff;
+      border-right: 2px solid #14ff00;
+      padding-right: 2.5rem;
+    }
+
+    a {
+      font-family: "Inter";
+      font-size: 1.4rem;
+      line-height: 1.21;
+      font-weight: 400;
+      color: #fff;
+      text-decoration: none;
+    }
+  }
+
+  & > div:nth-child(3) {
+    display: flex;
+    gap: 4.4rem;
+
+    select {
+      border: none;
+      color: #fff;
+      background-color: #0d2613;
+
+      option {
+        font-family: "Inter";
+        font-size: 1.4rem;
+        font-weight: 500;
+        line-height: 1.21;
+        color: #fff;
+      }
+    }
+
+    div {
+      display: flex;
+      gap: 0.8rem;
+      padding-block: 0.7rem;
+      color: #fff;
+
+      p {
+        font-family: "Inter";
+        font-size: 1.4rem;
+        font-weight: 500;
+        line-height: 1.21;
+      }
+    }
+  }
+}
+
+.hero {
+  margin-bottom: 3.9rem;
+  border-bottom: 2px solid #E9E7E7;
+
+  & > div:first-child {
+    display: flex;
+    justify-content: space-between;
+    padding-inline: 16.5rem;
+    margin-bottom: 4rem;
+  }
+
+  a {
+    font-family: "Bruno Ace";
+    font-size: 3rem;
+    line-height: 1;
+    font-weight: 400;
+    color: #0d2612;
+    text-decoration: none;
+  }
+
+  ul {
+    display: flex;
+    gap: 4rem;
+
+    a {
+      font-family: "Inter";
+      font-size: 1.6rem;
+      line-height: 1.21;
+      font-weight: 500;
+      color: #0d2612;
+      text-decoration: none;
+    }
+  }
+
+  div:nth-child(3) {
+    display: flex;
+    gap: 4.2rem;
+
+    svg {
+      width: 1.8rem;
+      height: 1.8rem;
+    }
+  }
+}
+
+.filters {
+  display: flex;
+  justify-content: space-between;
+  background-color: #d5f8cf;
+  padding: 2.8rem 7.3rem;
+  margin-bottom: 6.7rem;
+
+  p {
+    font-family: "Hammersmith One";
+    font-size: 2.4rem;
+    font-weight: 400;
+    text-align: center;
+    line-height: 1.25;
+    color: #0ba42d;
+  }
+
+  select {
+    background-color: #d5f8cf;
+    border: none;
+    color: #0ba42d;
+    font-family: "Hammersmith One";
+    font-size: 2.4rem;
+    font-weight: 400;
+    text-align: center;
+    line-height: 1.25;
+
+    option {
+      font-size: 1.6rem;
+    }
+  }
+}
+
+.main-wrapper {
+  display: grid;
+  grid-template-columns: 270px 1fr;
+  padding-inline: 7.3rem;
+  gap: 5.5rem;
+  margin-bottom: 5rem;
+
+  aside {
+    .brands-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 2.1rem;
+      padding-bottom: 2.7rem;
+
+      input[type="radio"] {
+        display: inline-block;
+        margin-right: 0.8rem;
+      }
+
+      li {
+        font-family: "Inter";
+        font-size: 1.8rem;
+        font-weight: 300;
+        line-height: 1.25;
+        color: #190d26;
+      }
+    }
+
+    .connectivity-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 2.1rem;
+      padding-bottom: 2.7rem;
+
+      li {
+        font-family: "Inter";
+        font-size: 1.8rem;
+        font-weight: 300;
+        line-height: 1.25;
+        color: #190d26;
+      }
+
+      input[type="radio"] {
+        display: inline-block;
+        margin-right: 0.8rem;
+      }
+    }
+
+    .colors-wrapper {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      padding-bottom: 2.7rem;
+    }
+  }
+}
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(299px, 1fr));
+  column-gap: 3.6rem;
+  row-gap: 6.8rem;
+
+  .product-card {
+    margin-top: 2.2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    .color_options {
+      display: flex;
+      gap: 1.2rem;
+      margin-bottom: 2.6rem;
+
+      .color_option {
+        width: 2rem;
+        height: 2rem;
+        border-radius: 50%;
+        border: 2px solid #000;
+      }
+    }
+
+    .price {
+      font-family: "Inter";
+      font-size: 2.2rem;
+      font-weight: 600;
+      line-height: 1.25;
+      color: #000;
+      margin-bottom: 2.2rem;
+    }
+    
+    .add-to-cart {
+      display: flex;
+      padding: 1.6rem 3.35rem;
+      background-color: #0ba42d;
+      color: #fff;
+      font-family: "Inter";
+      font-size: 2.2rem;
+      font-weight: 700;
+      line-height: 1.21;
+      text-align: center;
+      border: none;
+      border-radius: 1rem;
+      cursor: pointer;
+    }
+  }
+}
+
+.cart {
+  display: flex;
+}
+
+.cart p {
+  color: red;
+  font-size: 1.5rem;
+  font-family: "Inter";
+}
+
+.back {
+  display: flex;
+  text-align: start;
+  padding-left: 9.5rem;
+  margin-bottom: 5.2rem;
+
+  button {
+    border: none;
+    background-color: #fff;
+    cursor: pointer;
+  }
+  
+  p {
+    font-family: "Inter";
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 1.25;
+    color: #0d2612;
+  }
+}
+
+.carts {
+  display: flex;
+  padding-inline: 7.5rem;
+
+  & > div:first-child {
+    padding-right: 2.7rem;
+    border-right: 2px solid #E9E7E7;
+  }
+
+   .products-wrapper {
+    max-width: 83.3rem;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 0.8rem;
+    padding-top: 1.2rem;
+    border-top: dashed;
+    border-bottom: dashed;
+
+    p:first-child{
+      margin-left: 4.3rem;
+    }
+
+    p {
+      font-family: "Hammersmith One";
+      font-size: 2.2rem;
+      font-weight: 400;
+      line-height: 1.25;
+      color: #0d2612;
+    }
+  }
+
+  .price-wrapper {
+    display: flex;
+    gap: 15rem;
+    
+    p:nth-child(2) {
+      margin-right: 3.2rem;
+    }
+  }
+
+  .cart-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .cart-item {
+    display: flex;
+    text-align: start;
+    align-items: start;
+    padding-block: 3.5rem;
+    border-bottom: dashed;
+    max-width: 83.2rem;
+
+    .remove {
+      cursor: pointer;
+      background-color: inherit;
+      border: none;
+      margin-right: 2.2rem;
+
+      svg {
+        width: 1.6rem;
+        height: 1.6rem;
+      }
+    }
+
+    .product {
+      margin-left: 3.6rem;
+      display: flex;
+
+      div:first-child {
+         
+        strong {
+          margin-bottom: 0.7rem;
+          font-family: "Hammersmith One";
+          font-size: 2rem;
+          font-weight: 400;
+          line-height: 1.25;
+          color: #0d2612;
+        }
+
+        p:nth-child(2) {
+          font-family: "Inter";
+          font-size: 1.8rem;
+          font-weight: 300;
+          line-height: 1.25;
+          color: #190d26;
+        }
+      }
+
+      .quantity-wrapper {
+        display: flex;
+        margin-left: 11rem;
+        margin-right: 3.6rem;
+        background-color: #F5F5F5;
+        padding: 1rem;
+        gap: 3rem;
+        border-radius: 4rem;
+        max-height: 4.7rem;
+
+        button {
+          border: none;
+        }
+
+        p {
+          font-family: "Inter";
+          font-size: 2.2rem;
+          font-weight: 600;
+          line-height: 1.21;
+          color: #0d2612;
+        }
+      }
+
+      .product-price {
+        font-family: "Inter";
+        font-size: 2.4rem;
+        font-weight: 700;
+        line-height: 1.25;
+        color: #0d2612;
+      }
+    }
+  }
+
+  .total_price {
+    padding-left: 3.1rem;
+
+    .card_totals {
+     font-family: "Hammersmith One";
+     font-size: 3.2rem;
+     font-weight: 400;
+     line-height: 1.25;
+     color: #0d2612;
+     padding-bottom: 0.8rem;
+     border-bottom: dashed;
+    }
+
+    div:not(:last-child) {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 2.1rem;
+
+      p {
+        font-family: "Inter";
+        font-size: 1.8rem;
+        font-weight: 300;
+        line-height: 1.25;
+        color: #190D26;
+      }
+
+      strong {
+        font-family: "Inter";
+        font-size: 1.8rem;
+        font-weight: 500;
+        line-height: 1.25;
+        color: #190D26;
+      }
+    }
+
+    .proceed {
+      margin-block: 4.7rem;
+      padding: 1.6rem 8.65rem;
+      font-family: "Inter";
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: #fff;
+      background-color: #0ba42d;
+      border-radius: 1rem;
+      border: none;
+      text-align: center;
+    }
+  }
+}
+
+.product-page {
+  padding-inline: 9rem 7.3rem;
+  margin-bottom: 5rem;
+
+  .product-details {
+
+    p {
+      text-align: start;
+    }
+
+    p:first-child {
+      font-family: "Inter";
+      font-size: 2rem;
+      font-weight: 400;
+      line-height: 1.25;
+      color: #454444;
+    }
+
+    .product-wrapper {
+      display: flex;
+
+      & > div {
+        margin-left: 3.9rem;
+      }
+
+      h3 {
+        font-size: 4.8rem;
+        font-weight: 400;
+        margin-bottom: 1.6rem;
+        text-align: start;
+      }
+
+      .color_options {
+        display: flex;
+        gap: 3.1rem;
+        padding-bottom: 3.7rem;
+        border-bottom: dashed;
+      }
+
+      .quantity-controls {
+        display: flex;
+        gap: 6.2rem;
+        margin-top: 4.5rem;
+        margin-bottom: 5.1rem;
+
+        > div {
+          display: flex;
+          background-color: #F5F5F5;
+          border: 3px solid #0ba42d;
+          padding: 1.9rem 3rem;
+          gap: 3rem;
+          border-radius: 4rem;
+
+          p {
+            font-family: "Inter";
+            font-size: 2.6rem;
+            font-weight: 600;
+            color: #0d2612;
+            line-height: 1.21;
+            padding: 0;
+          }
+          
+
+          button {
+            border: none;
+          }
+
+          svg {
+            width: 3rem;
+            height: 3rem;
+          }
+        }
+
+        p {
+          font-family: "Inter";
+          font-size: 1.8rem;
+          font-weight: 600;
+          color: #0d2612;
+          line-height: 1.21;
+          max-width: 15.7rem;
+        }
+      }
+
+      .add-to-cart {
+        display: flex;
+        padding: 1.6rem 14.2rem;
+        background-color: #0ba42d;
+        color: #fff;
+        font-family: "Inter";
+        font-size: 2.2rem;
+        font-weight: 700;
+        line-height: 1.21;
+        text-align: center;
+        border: none;
+        border-radius: 1rem;
+        cursor: pointer;
+      }
+
+      .heart {
+        padding: 1.4rem;
+        border: 3px solid #0d2612;
+        border-radius: 1rem;
+      }
+    }
+  }
+  
+}
+
+
+.reset {
+  background-color: darkcyan;
+  color: white;
+  padding: 0.5rem;
+  border: none;
+}
